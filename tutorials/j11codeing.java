@@ -114,6 +114,8 @@ public class j11codeing {
 
         // imp
         int arr[] = { 1, 2, 3, 4 };
+
+        
         ArrayList<Integer> arlist = new ArrayList<Integer>();
         arlist.add(2);
         arlist.add(21);
