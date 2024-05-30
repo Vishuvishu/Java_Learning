@@ -5,6 +5,9 @@ public class j5string {
     public static void main(String[] args) {
 
         // why strings are immutable
+        
+
+        
 
         char str1[] = { '1', '2', '3' };
         String str2 = "123";
