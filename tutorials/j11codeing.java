@@ -123,6 +123,9 @@ public class j11codeing {
         arlist.add(52);
         arlist.add(267);
 
+
+
+        
         System.out.println(arlist);
         Collections.sort(arlist);
         System.out.println(arlist);
