@@ -1,0 +1,85 @@
+Java
+
+database orace or mysql
+jsp(front end)(little) servlets
+Spring boot
+
+
+
+jsp 	jakarta server pages
+servlets java programming class
+
+MVC artictecture
+JDBC API (java database connectivity api for sql query)
+
+Spring
+Spring core -> DEpendancy injection
+-> inversion of control
+-> beans and beans scope
+->spring configration(xml, withour xml(java),anotaion)
+
+Spring MVC
+Request params
+Request params
+Path variable
+
+Spring rest
+->json data binding
+->spring rest controller
+-> retrive pojos(java objects)
+-> using path variable for 
+-> rest endpoints
+-> exception handling
+-> configuration
+-> pagination
+-> sorting
+
+hibernate (ORM) better version (spring data jpa/spring data rest)
+crud operations
+eager vs lazy lading 
+hibernate maping 
+
+Spring AOP
+beforeadvice type
+pointcut expressions
+pointcut decalrqation
+oredering aspects
+join points
+advice type\
+
+Project
+train reswernavation(using jsp and servelts) than added spring core spring mvc and spring rest than hibernate
+pick one than improve 
+
+Spring security (imp)
+authentication and authorization
+oauth 2.0
+jwt tocken
+cors
+csrf
+user roles
+
+junit and mockito
+
+spring boot
+makes developemetn faster
+spring boot devtools
+spring boot actuator
+
+redis with spring boot
+kafka with spring boot
+
+spring cloud and microservice 
+
+
+
+_________________________________________________________________________________________
+
+basic java
+adbvancesd - multithreading exception handling file handling db connectivity
+fisrt db as rdbms sql(java database connectivity)
+servlet(old not used in industry) 
+hibernate	(includes jpa)
+security (spring security)
+web app using spring-depedalcy injection
+microservice(not expertice just uper uper se)

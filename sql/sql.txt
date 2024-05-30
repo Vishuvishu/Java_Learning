@@ -1,0 +1,15 @@
+
+Admin@root1  password for root
+
+
+in youtube  video it opwn mysql cli but i have mysql shell
+by defalut it is mysql/js
+so type \sql
+than it become mysql/sql
+than connect \connect root@localhost
+than type password and it is connected
+
+type show databases; and if it shows it is connected
+
+
+to connect java with vscode in left panel open java projects in library>add library as jar file from program(x86)>mysql>connector
