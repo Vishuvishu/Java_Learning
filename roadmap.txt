@@ -1,5 +1,6 @@
 Java
 
+
 database orace or mysql
 jsp(front end)(little) servlets
 Spring boot
