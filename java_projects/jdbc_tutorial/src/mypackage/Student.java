@@ -26,7 +26,7 @@ public class Student {
         String query = "create database db";
         stm.execute(query); //sometime even database create it still give false
         //it gives false even database created 
-        //throw execption if already db exists              
+    	    //throw execption if already db exists              
             System.out.println("dbms created succesfully");
             			//step 5:connection close
         conn.close();
