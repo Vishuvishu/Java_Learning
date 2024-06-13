@@ -5,5 +5,7 @@
 /sql/sql.txt
 /sql/sql_connect_with_java.docx
 /java_learnning.docx
-.properties
+*.properties
 /java_project_spring/spring.docx
+/java_project_spring/JobPortal/jobportal/src/main/resources/application.properties
+**/node_modules
