@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-import "./home.css"
+import "./css/home.css"
 
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
         <div>
           <ul className="ul">
             <li>
-              <button class="button-52" role="button"><Link to="/employer/dashboard">
+              <button class="button-52" role="button"><Link to="/employer/createpost">
                 Hire talent
               </Link></button>
 
@@ -25,14 +25,17 @@ const Home = () => {
               </Link></button>
               {/* 
               <Button sx={{ margin: "2% 3%" }} variant="outlined">
-               
+
               </Button> */}
             </li>
           </ul>
         </div>
       </div>
-    </div>
+    </div >
+
+
   );
+
 };
 
 export default Home;

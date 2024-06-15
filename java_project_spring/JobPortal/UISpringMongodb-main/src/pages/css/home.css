@@ -5,7 +5,7 @@
   } */
   
   .background {
-    background-image: url('../image/background.jpg');
+    background-image: url('../../image/background1.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -16,11 +16,14 @@
   
   .overlay {
     /* background: rgba(145, 143, 143, 0.116); */
-    backdrop-filter: blur(30px);
+    background-color: #15172b;
+    /* backdrop-filter: blur(30px);  */
     padding: 20px;
+    /* background-color:rgba(69, 70, 71, 0.308); */
     border-radius: 10px;
-    box-shadow: rgba(10, 10, 10, 0.445) 0px 0px 0px 2px;
+    box-shadow: rgba(245, 245, 245, 0.445) 0px 0px 0px 2px;
          text-align: center;
+         color:rgb(255, 255, 255);
   }
   
   .ul {
@@ -48,10 +51,11 @@
   letter-spacing: 1px;
   padding: 13px 20px 13px;
   outline: 0;
-  border: 1px solid black;
+  border: 1px solid rgb(134, 128, 128);;
+  color:rgb(134, 128, 128);
   cursor: pointer;
   position: relative;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(39, 37, 37, 0.521);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -59,7 +63,7 @@
 
 .button-52:after {
   content: "";
-  background-color: #29282734;
+  background-color: #ff000034;
   
    /* backdrop-filter: blur(300px); */
 
