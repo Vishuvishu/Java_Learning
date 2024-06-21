@@ -1,94 +1,61 @@
-import {
-  Box,
-  Card,
-  Grid,
-  TextField,
-  Typography,
-  InputAdornment,
-  Button,
-} from "@mui/material";
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import SearchIcon from "@mui/icons-material/Search";
-import { Link } from "react-router-dom";
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './css/feed.css';
 
 const Feed = () => {
-  const [query, setQuery] = useState("");
-  const [post, setPost] = useState();
+    const [query, setQuery] = useState('');
+    const [post, setPost] = useState([]);
 
-  //
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const response = await axios.get(`http://localhost:8080/allPost1/${query}`);
-      setPost(response.data);
-    };
-    const fetchInitialPosts = async () => {
-      const response = await axios.get(`http://localhost:8080/allPost`);
-      console.log(response);
-      setPost(response.data);
-    }
-    if (query.length === 0) fetchInitialPosts();
-    if (query.length > 2) fetchPosts();
-  }, [query]);
-  console.log(post);
-  return (
-    <Grid container spacing={2} sx={{ margin: "2%" }}>
-      <Grid item xs={12} sx={12} md={12} lg={12}>
-        <Button sx={{ margin: "1% 2%" }} variant="outlined">
-          <Link to="/">Home</Link>
-        </Button>
-        <Box>
-          <TextField
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <SearchIcon />
-                </InputAdornment>
-              ),
-            }}
-            placeholder="Search..."
-            sx={{ width: "75%", padding: "2% auto" }}
-            fullWidth
-            onChange={(e) => setQuery(e.target.value)}
-          />
-        </Box>
-      </Grid>
-      {post &&
-        post.map((p) => {
-          return (
-            <Grid key={p.id} item xs={12} md={6} lg={4}>
-              <Card sx={{ padding: "3%", overflow: "hidden", width: "84%" }}>
-                <Typography
-                  variant="h5"
-                  sx={{ fontSize: "2rem", fontWeight: "600" }}
-                >
-                  {p.profile}
-                </Typography>
-                <Typography sx={{ color: "#585858", marginTop: "2%" }} variant="body" >
-                  Description: {p.desc}
-                </Typography>
-                <br />
-                <br />
-                <Typography variant="h6">
-                  Years of Experience: {p.exp} years
-                </Typography>
+    const colors = ['#15172b', '#15172b', '#15172b', '#15172b', '#15172b', '#15172b'];
 
-                <Typography gutterBottom variant="body">Skills : </Typography>
-                {p.techs.map((s, i) => {
-                  return (
-                    <Typography variant="body" gutterBottom key={i}>
-                      {s} .
-                      {` `}
-                    </Typography>
-                  );
-                })}
+    useEffect(() => {
+        const fetchPosts = async () => {
+            const response = await axios.get(`http://localhost:8080/allPost1/${query}`);
+            setPost(response.data);
+        };
 
-              </Card>
-            </Grid>
-          );
-        })}
-    </Grid>
-  );
+        const fetchInitialPosts = async () => {
+            const response = await axios.get('http://localhost:8080/allPost');
+            setPost(response.data);
+        };
+
+        if (query.length === 0) fetchInitialPosts();
+        if (query.length > 2) fetchPosts();
+    }, [query]);
+
+    return (
+        <div className="feed-container">
+            <div className="header">
+                <button className="home-button">
+                    <Link to="/" className="home-link">Home</Link>
+                </button>
+                <div className="search-box">
+                    <input
+                        type="text"
+                        placeholder="Search..."
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
+                    />
+                </div>
+            </div>
+            <div className="grid-container">
+                {post && post.map((p, index) => (
+                    <div key={p.id} className="card" style={{ backgroundColor: colors[Math.floor(Math.random() * colors.length)] }}>
+                        <h2>{p.profile}</h2>
+                        <p>Description: {p.desc}</p>
+                        <p>Years of Experience: {p.exp} years</p>
+                        <p>Skills:</p>
+                        <ul>
+                            {p.techs.map((tech, i) => (
+                                <li key={i}>{tech}</li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
 };
 
 export default Feed;

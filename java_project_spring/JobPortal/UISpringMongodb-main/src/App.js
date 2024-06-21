@@ -11,6 +11,7 @@ function App() {
           <Route path="/employer/createpost" element={<CreatePost />} />
         </Route>
         <Route path="/employee/feed" element={<Feed />} />
+        {/* <Route path="ex/employee/feed" element={<Example />} /> */}
 
       </Routes>
     </BrowserRouter>

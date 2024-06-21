@@ -16,8 +16,6 @@ const Home = () => {
               <button class="button-52" role="button"><Link to="/employer/createpost">
                 Hire talent
               </Link></button>
-
-
             </li>
             <li>
               <button class="button-52" role="button"> <Link to="/employee/feed">

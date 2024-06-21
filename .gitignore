@@ -1,6 +1,7 @@
 /gitinfo.txt
 /roadmap.txt
 /Java_roadmap.docx
+/jar
 /sql/sql.docx
 /sql/sql.txt
 /sql/sql_connect_with_java.docx
@@ -9,3 +10,5 @@
 /java_project_spring/spring.docx
 /java_project_spring/JobPortal/jobportal/src/main/resources/application.properties
 **/node_modules
+/java_project_swing/collge_management_new/CollageManagentNew/nbproject/private/
+/java_project_swing/collge_management_new/CollageManagentNew/build/
